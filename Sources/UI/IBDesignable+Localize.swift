@@ -6,10 +6,11 @@
 //
 
 import Foundation
-import UIKit
 
 // MARK: - UILabel localize Key extention for language in story board
 
+#if !os(watchOS) && !os(macOS)
+import UIKit
 @IBDesignable public extension UILabel {
     @IBInspectable var localizeKey: String? {
         set {
@@ -90,3 +91,4 @@ import UIKit
         }
     }
 }
+#endif
